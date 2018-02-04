@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        .loader-overlay {
+          z-index: 9999;
+          position: fixed;
+          background-color: white;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .preload-img {
+          animation-name: size;
+          animation-iteration-count: infinite;
+          animation-duration: 1s;
+        }
+
+        @keyframes size {
+            from {
+                width: 250px;
+            } to {
+                width: 350px;
+            } 
+        }
+    </style>
+    <script>
+      window.addEventListener('load', function () {
+        document.getElementById('loader').style.display = "none";
+      });
+    </script>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Jquery UI -->
+    <!-- Required for calender -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Styles for nav, slideshow -->
+    <link rel = "stylesheet" href = "resources/css/body.css">
+    <link rel = "stylesheet" href = "resources/css/nav.css">
+
+    <!-- Styles for other content -->
+    <link rel = "stylesheet" href = "resources/css/content.css">
+
+    <!-- Styles for buttons -->
+    <link rel = "stylesheet" href = "resources/css/buttons.css">
+
+    <!-- Favicon -->
+    <link rel = "icon" href = "favicon/favicon.png" type = "image/x-icon">
+
+    <!-- Font styles -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Slabo+27px" rel="stylesheet">
+    <title>{{pageTitle}}</title>
+  </head>
+  <body>
+    <div class = "loader-overlay" id = "loader">
+      <img src = "Images/preload-img/preload-img.png" class = "preload-img">
+    </div>
+    <!-- Navigation -->
+    {{> nav}}
+
+    <!-- Search panel -->
+    {{> search}}  
+
+    <div class = "message-super-container">
+      <div class = "message-container" id = "js-error-message-container">
+        <p class = "message-text" id = "js-message-elem"></p>
+      </div>
+    </div>
+
+    <!-- Slideshow -->
+    <!-- Styles are in body.css -->
+    <div class = "container">
+      <div class = "container__img" id = "slideshow-container">
+        <div class = "grid">
+
+        <p class = "quarter" onclick = "change('left')"><i class = "fa fa-angle-left fa-5x left"></i></p>
+        <div class = "remaining image-text">
+          <div class = "group">
+            <p>Welcome to Monet's</p>
+            <p class = "sub-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class = "sub-title">It has survived not only five centuries.</p>
+          </div>
+        </div>
+        <p class = "quarter" onclick = "change('right')"><i class = "fa fa-angle-right fa-5x right"></i></p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Body container -->
+    <!-- This contains everything expect slideshow and navbar -->
+    <div class = "content-container">
+
+      <!-- Follow links -->
+      <div class = "follow-us-container">
+        <div class = "follow-us__links">
+
+          <div class = "link-parent">
+            <a href = "#" class = "border-link">
+              <i class = "fa fa-facebook follow-links"></i>
+            </a>
+          </div>
+
+          <div class = "link-parent">
+            <a href = "#" class = "border-link">
+              <i class = "fa fa-instagram follow-links"></i>
+            </a>
+          </div>
+
+          <div class = "link-parent">
+            <a href = "#" class = "border-link">
+              <i class = "fa fa-linkedin follow-links"></i>
+            </a>
+          </div>
+
+          <div class = "link-parent">
+            <a href = "#" class = "border-link">
+              <i class = "fa fa-youtube-play follow-links"></i>
+            </a>
+          </div>
+
+          <div class = "link-parent">
+            <a href = "#" class = "border-link">
+              <i class = "fa fa-twitter follow-links"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class = "intro-conatiner">
+        <p class = "intro-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+          <br><br>
+
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in  culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <header class = "container__header">
+        <p class = "header__headline" onmouseover="increaseHr('js-head_hr')" onmouseout="decreaseHr('js-head_hr')">What our customers liked most</p>
+        <hr class = "header__hr" id = "js-head_hr">
+      </header>
+
+      <section class = "container__body">
+        <div class = "container__body__foodimages" id = "js-container-foodcards">
+          <div style = "display: block" id = "js-foodcards-panel-1" class = "foodcard-group">
+            <div class = "foodcard__super__parent">
+              <div class = "foodcard-parent">
+                <div class = "foodcard img4"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$30.50</b></p>
+              </div>
+
+              <div class = "foodcard-parent">
+                <div class = "foodcard img2"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$59.50</b></p>
+              </div>
+
+              <div class = "foodcard-parent">
+                <div class = "foodcard img1"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$100.00</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div style = "display: none" id = "js-foodcards-panel-2" class = "foodcard-group">
+            <div class = "foodcard__super__parent">
+              <div class = "foodcard-parent">
+                <div class = "foodcard img3"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$30.50</b></p>
+              </div>
+
+              <div class = "foodcard-parent">
+                <div class = "foodcard img5"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$59.50</b></p>
+              </div>
+
+              <div class = "foodcard-parent">
+                <div class = "foodcard img6"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$100.00</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div style = "display: none" id = "js-foodcards-panel-3" class = "foodcard-group">
+            <div class = "foodcard__super__parent">
+              <div class = "foodcard-parent">
+                <div class = "foodcard img7"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$30.50</b></p>
+              </div>
+
+              <div class = "foodcard-parent">
+                <div class = "foodcard img8"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$59.50</b></p>
+              </div>
+
+              <div class = "foodcard-parent">
+                <div class = "foodcard img9"></div>
+                <p class = "foodcard__description">Lorem Ipsum</p>
+                <p class = "foodcard__description"><b>$100.00</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class = "card-changer-badge">
+          <p>
+            <span class = "badge" onclick = "changeCard('1')"></span>
+            <span class = "badge" onclick = "changeCard('2')"></span>
+            <span class = "badge" onclick = "changeCard('3')"></span>
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- GET TOGETHER panel -->
+    <!-- This panel is above BOOKING TABLE panel -->
+
+    <div class = "get-together-container">
+        <p class = "get-together-text">--- GET TOGETHER ---</p>
+    </div>
+
+
+    <div class = "content-container">
+      <!-- BOOK A TABLE SECTION -->
+      <div class = "booking-container">
+
+        <!-- heading of booking table section -->
+        <header class = "container__header">
+          <p class = "header__headline" onmouseover="increaseHr('js-head_hr-2')" onmouseout="decreaseHr('js-head_hr-2')">Book a Table</p>
+          <hr class = "header__hr" id = "js-head_hr-2">
+        </header>
+
+        <!-- section starts of booking table -->
+        <section class = "container__body">
+          <!-- Inline block row -->
+          <div class = "row-book">
+            <!-- Chef image -->
+            <div class = "chef-image">
+              <img src = "Images/chef-image-2.jpg" class = "chef">
+            </div>
+
+            <!-- Form panel starts -->
+            <div class = "form-side">
+              <div class = "super-parent">
+                <div class = "form-parent">
+                  <form action="get" id = "contact-form">
+                    <label>Enter name:</label>
+                    <input type="text" name = "name" value="" placeholder="Name" id = "name" required>
+
+                    <br><br>
+
+                    <label>Enter contact no:</label>
+                    <input type="text" name="contact-no" value="" placeholder="Contact No" id = "contact">
+
+                    <br><br>
+
+                    <label>Date:</label>
+                    <input type = "text" name="date" value="" placeholder="Date" id = "date">
+
+                    <br><br>
+
+                    <label>Enter number of people:</label>
+                    <input type="number" name = "no-of-people" value = "" placeholder="No. of People" id = "noOfPeople" required>
+
+                    <br><br>
+
+                    <label>Enter email:</label>
+                    <input placeholder="Email" id = "email" name = "email">
+
+                    <br><br>
+
+                    <button type = "submit" id = "submit_button" class = "ripple panel" style = "width: 200px; margin: auto; display: block; z-index: 1;";>
+                      BOOK
+                    </button>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src = "resources/js/script.js"></script>
+    <script src = "resources/js/firebase.js"></script>
+
+    <script>
+      $( function () {
+        $("#date").datepicker();
+      })
+    </script>
+  </body>
+</html>

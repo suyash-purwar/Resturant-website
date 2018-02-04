@@ -1,0 +1,47 @@
+nav {
+  position: fixed;
+  z-index: 1;
+  height: 50px;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation-name: come;
+  animation-duration: .3s;
+  color: white;
+  border-bottom: 1px solid bottom;
+  background-color: black;
+}
+
+@keyframes come {
+  from {
+    top: -40px;
+    opacity: .5;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.nav-elem {
+  font-size: 18px;
+  width: auto;
+  padding: 0px 20px;
+  position: relative;
+  text-align: center;
+  font-family: 'Century Gothic', 'Raleway';
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-elem:hover {
+  color: grey;
+}
+
+.search-nav-btn {
+  font-size: 20px;
+  color: white;
+  display: block;
+}

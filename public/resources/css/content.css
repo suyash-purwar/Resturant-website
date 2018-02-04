@@ -1,0 +1,462 @@
+/* Style for centering the whole html in center */
+/* Style for creating a max-width */
+/* This style doesn't apply on navbar, slideshow and search box */
+.content-container {
+  padding: 20px 0px;
+  display: block;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* These are the styles for search box */
+/* This search box appears when you click on font awesome */
+
+.search-box-parent {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(78, 78, 78, .5);
+  animation-duration: .4s;
+}
+
+@keyframes move-in-search-box {
+  from {
+    top: -200px;
+    opacity: 0;
+  } to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes move-out-search-box {
+  from {
+    top: 0px;
+    opacity: 1;
+  } to  {
+    top: 200px;
+    opacity: 0;
+  }
+}
+.search-box {
+  width: 60vw;
+  height: 50vh;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.search-content {
+  padding: 20px 0px;
+  margin: auto;
+  display: block;
+}
+
+.search-text {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Slabo 27px';
+}
+
+.search-input {
+  margin: auto;
+  text-align: center;
+  display: block;
+  border:none;
+  border-bottom: 2px solid black;
+  width: 360px;
+  transition: .3s;
+  outline: none;
+}
+
+.search-input:focus {
+  width: 440px;
+}
+
+.search-button {
+  top: 30px;
+  width: 250px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  font-family: 'Raleway';
+  display: block;
+  padding: 6px 23px;
+}
+
+.search-panel-close-btn {
+  font-size: 20px;
+  padding-right: 14px;
+  color: black;
+  float: right;
+  transition: .4s;
+  cursor: pointer;
+}
+
+/* These are the styles for small error messages */
+.message-super-container {
+  display: flex;
+  justify-content: center;
+}
+
+.message-container {
+  width: 60vw;
+  display: none;
+  position: fixed;
+  z-index: 20;
+  bottom: 10px;
+  animation-name: fromBottom;
+  animation-duration: .4s;
+  border-radius: 7px;
+  text-align: center;
+}
+
+@keyframes fromBottom {
+  from {
+    bottom: -10px;
+    opacity: .5;
+  } to {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+
+.message-text {
+  color: white;
+  font-family: 'Raleway', 'Calibri Ligth', 'Century Gothic'
+}
+
+/* These are the styles for creating ripple effect in buttons */
+.btn-ripple {
+  overflow: hidden;
+  position: relative;
+  transform: translate3d(1, 1, 1);
+}
+
+.btn-ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.btn-ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+/* Styles for follow us conatiner */
+.follow-us-container {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.follow-us__links {
+  display: inline-block;
+}
+
+.link-parent {
+  float: left;
+  padding: 0px 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.follow-links {
+  padding: 7px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid grey;
+  border-radius: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s ease-in;
+}
+
+.follow-links:hover {
+  transform: rotate(360deg);
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+/* Styles for Introduction container */
+/* These styles are for elements which are just below 'follow container'*/
+
+.intro-container {
+  padding: 10px 0px;
+}
+
+.intro-text {
+  font-size:17px;
+  font-family: 'Raleway';
+  color: grey;
+  text-align: center;
+}
+
+header.container__header {
+  padding: 5px 0px;
+}
+
+.header__headline {
+  line-height: 0px;
+  font-size: 55px;
+  color: black;
+  text-align: center;
+  font-family: 'Slabo 27px'
+}
+
+hr.header__hr {
+  transition: .7s all ease-in-out;
+  width: 40px;
+  border: 1px solid black;
+}
+
+/* These are the styles for foodcards */
+
+section.container__body {
+  margin: auto;
+  width: 100%;
+}
+
+.container__body__foodimages {
+  display: inline-block;
+  width: 100%;
+}
+
+.foodcard-group {
+  position: relative;
+  animation-name: fromTop;
+  animation-duration: 1s;
+}
+
+@keyframes fromTop {
+  from {
+    top: -50px;
+  } to {
+    top: 0px;
+  }
+}
+
+.foodcard__super__parent {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.foodcard {
+  width: 250px;
+  height: 340px;
+  position: relative;
+
+}
+
+.foodcard-parent {
+  box-shadow: 1px 1px 1px 1px lightgrey;
+  float: right;
+  cursor: pointer;
+  padding: 10px;
+  transition: .2s;
+}
+
+.foodcard-parent:hover {
+  filter: opacity(.9);
+  box-shadow: 2px 2px 2px 2px lightgrey;
+}
+
+.foodcard__description {
+  text-align: center;
+  font-size: 18px;
+  line-height: 2px;
+  font-family: 'Slabo 27px';
+}
+
+
+/* These are the styles for small buttons which are below food cards section */
+/* These small buttons are used to change cards */
+/* There are 9 food cards */
+
+.card-changer-badge {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.badge {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #454545;
+  border-radius: 100%;
+  cursor: pointer;
+  display: inline-block;
+  transition: .7s;
+}
+
+.badge:hover {
+  background-color: #454545;
+}
+
+/* These all are the images which are used in food cards */
+.img4{
+  background-image: url('../../Images/FoodCard/foodCard4.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img3{
+  background-image: url('../../Images/FoodCard/foodCard3.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img2{
+  background-image: url('../../Images/FoodCard/foodCard2.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img1{
+  background-image: url('../../Images/FoodCard/foodCard1.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img5{
+  background-image: url('../../Images/FoodCard/foodCard5.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img6{
+  background-image: url('../../Images/FoodCard/foodCard6.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img7{
+  background-image: url('../../Images/FoodCard/foodCard7.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img8{
+  background-image: url('../../Images/FoodCard/foodCard8.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img9{
+  background-image: url('../../Images/FoodCard/foodCard9.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* These are the styles for GET TOGETHER panel */
+/* This panel is below food-cards section and about booking table section */
+
+.get-together-container {
+  width: 100%;
+  background-image: url('/Images/get-together.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 40px 0px;
+}
+
+.get-together-text {
+  text-align: center;
+  font-size: 80px;
+
+  font-family: 'Slabo 27px';
+  color: white;
+}
+
+
+/* Styles for booking a table */
+
+.row-book {
+  display: inline-block;
+}
+
+.chef-image {
+  overflow: hidden;
+  width: 35%;
+  float: left;
+}
+
+.chef {
+  width: 120%;
+}
+
+
+/* These are the styles for form in booking table section */
+
+.form-side {
+  float: left;
+  width: 65%;
+}
+
+.super-parent {
+  width: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.form-parent {
+  border-radius: 10px;
+  width: calc(100vw - 450px);
+  padding: 20px;
+}
+
+label {
+  color:#454545;
+  font-size: 14px;
+  font-family: Century Gothic;
+}
+
+input {
+  padding-left: 10px;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  border:none;
+  border-bottom: 2px solid #454545;
+  color: #454545;
+  font-size: 16px;
+  font-family: Century Gothic;
+}

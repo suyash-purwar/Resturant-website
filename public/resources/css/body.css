@@ -1,0 +1,84 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.container__img {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center center;
+  background-image: url('../../Images/Slideshow/1.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.quarter {
+  color: white;
+  width: 5%;
+  float: left;
+}
+
+.remaining {
+  width: 90%;
+
+  float: left;
+}
+
+.image-text {
+  font-family: Raleway;
+  line-height: 0px;
+  font-size: 65px;
+  display: flex;
+  color: black;
+  justify-content: center;
+}
+
+.left {
+  padding-left: 15px;
+  float: left;
+
+}
+
+.right {
+  padding-right: 15px;
+  float: right;
+}
+
+
+.sub-title {
+  text-align: center;
+  font-family: Raleway;
+  font-size: 18px;
+  line-height: 0px;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
