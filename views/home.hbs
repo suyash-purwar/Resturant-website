@@ -40,7 +40,6 @@
     <!-- Jquery UI -->
     <!-- Required for calender -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -84,9 +83,9 @@
         <div class = "grid">
 
         <p class = "quarter" onclick = "change('left')"><i class = "fa fa-angle-left fa-5x left"></i></p>
-        <div class = "remaining image-text">
+        <div class = "remaining">
           <div class = "group">
-            <p>Welcome to Monet's</p>
+            <p class = " image-text">Welcome to Monet's</p>
             <p class = "sub-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <p class = "sub-title">It has survived not only five centuries.</p>
           </div>
@@ -138,7 +137,7 @@
         </div>
       </div>
 
-      <div class = "intro-conatiner">
+      <div class = "intro-container">
         <p class = "intro-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -224,9 +223,9 @@
 
         <div class = "card-changer-badge">
           <p>
-            <span class = "badge" onclick = "changeCard('1')"></span>
-            <span class = "badge" onclick = "changeCard('2')"></span>
-            <span class = "badge" onclick = "changeCard('3')"></span>
+            <span class = "badge fromBottom" onclick = "changeCard('1')"></span>
+            <span class = "badge fromRight" onclick = "changeCard('2')"></span>
+            <span class = "badge fromLeft" onclick = "changeCard('3')"></span>
           </p>
         </div>
       </section>
@@ -265,27 +264,27 @@
                 <div class = "form-parent">
                   <form action="get" id = "contact-form">
                     <label>Enter name:</label>
-                    <input type="text" name = "name" value="" placeholder="Name" id = "name" required>
+                    <input class = "booking-inp" type="text" name = "name" value="" placeholder="Name" id = "name" required>
 
                     <br><br>
 
                     <label>Enter contact no:</label>
-                    <input type="text" name="contact-no" value="" placeholder="Contact No" id = "contact">
+                    <input class = "booking-inp" type="text" name="contact-no" value="" placeholder="Contact No" id = "contact">
 
                     <br><br>
 
                     <label>Date:</label>
-                    <input type = "text" name="date" value="" placeholder="Date" id = "date">
+                    <input class = "booking-inp" type = "text" name="date" value="" placeholder="Date" id = "date">
 
                     <br><br>
 
                     <label>Enter number of people:</label>
-                    <input type="number" name = "no-of-people" value = "" placeholder="No. of People" id = "noOfPeople" required>
+                    <input class = "booking-inp" type="number" name = "no-of-people" value = "" placeholder="No. of People" id = "noOfPeople" required>
 
                     <br><br>
 
                     <label>Enter email:</label>
-                    <input placeholder="Email" id = "email" name = "email">
+                    <input class = "booking-inp" placeholder="Email" id = "email" name = "email">
 
                     <br><br>
 
@@ -304,6 +303,9 @@
     </div>
 
     
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src = "resources/js/script.js"></script>
     <script src = "resources/js/firebase.js"></script>
