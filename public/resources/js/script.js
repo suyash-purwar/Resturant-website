@@ -112,7 +112,7 @@ sr.reveal('.sub-title', {
   duration: 1500,
   origin: 'bottom',
   distance: '20px'
-})
+});
 
 // For introduction 
 sr.reveal('.intro-container', {
@@ -134,13 +134,13 @@ sr.reveal('.follow-us-container', {
 sr.reveal('.container__header', {
   duration: 1500,
   rotate: {x: 50, y: 0, z: 0}
-})
+});
 
 // For foodcards
 sr.reveal('.container__body__foodimages', {
   duration: 1500,
   rotate: {x: 0, y: 100, z: 0}
-})
+});
 
 // For foodcard badges
 sr.reveal('.badge', {
@@ -156,7 +156,7 @@ sr.reveal('.chef-image', {
   distance: '30px',
   duration: 2000,
   delay: 50
-})
+});
 
 // For input fields in form
 sr.reveal('.booking-inp', {
@@ -164,4 +164,4 @@ sr.reveal('.booking-inp', {
   duration: 2000,
   distance: '15px',
   delay: 20
-}, 250)
+}, 250);

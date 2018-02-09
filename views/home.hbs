@@ -223,9 +223,9 @@
 
         <div class = "card-changer-badge">
           <p>
-            <span class = "badge fromBottom" onclick = "changeCard('1')"></span>
-            <span class = "badge fromRight" onclick = "changeCard('2')"></span>
-            <span class = "badge fromLeft" onclick = "changeCard('3')"></span>
+            <span class = "badge" onclick = "changeCard('1')"></span>
+            <span class = "badge" onclick = "changeCard('2')"></span>
+            <span class = "badge" onclick = "changeCard('3')"></span>
           </p>
         </div>
       </section>
@@ -288,7 +288,7 @@
 
                     <br><br>
 
-                    <button type = "submit" id = "submit_button" class = "ripple panel" style = "width: 200px; margin: auto; display: block; z-index: 1;";>
+                    <button id = "submit_button" class = "ripple panel" style = "width: 200px; margin: auto; display: block; z-index: 1;">
                       BOOK
                     </button>
 
@@ -305,11 +305,12 @@
     
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-    <script src = "resources/js/script.js"></script>
+    <!-- Firebase -->
     <script src = "resources/js/firebase.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <!-- My Scripts -->
+    <script src = "resources/js/script.js"></script>
+    
     <script>
       $( function () {
         $("#date").datepicker();
